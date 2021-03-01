@@ -4,7 +4,7 @@
 
 * [Summary](#summary)
 * [Resources](#resources)
-* [Market Analysis](#market_analysis) 
+* [Market Analysis](#market-analysis) 
 * [Modeling](#modeling)
 ---
 ## Summary
