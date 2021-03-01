@@ -4,19 +4,13 @@
 
 * [Summary](#summary)
 * [Resources](#resources)
-* [Exploratory Data Analysis](#exploratory-data-analysis)
-  * [Analysis by Sneakers Name](#analysis_by_sneakers_name)
-  * [Analysis by Retail Price](#analysis_by_retail_price)
-  * [Analysis by Shoe Size](#analysis_by_shoe_size)
-  * [Analysis by Region](#analysis_by_region)
-  * [Analysis by Ordered Date](#analysis_by_ordered_date)
-  * [Analysis by Average Resale Price](#analysis_by_average_sales_price)  
+* [Market Analysis](#market_analysis) 
 * [Modeling](#modeling)
 ---
 ## Summary
 
 ---
-## Data Source 
+## Resources
 ![Stockx_image](images/stockxlogo.png)
 
 StockX provided data in 2019 as part of its [StockX Data Contest](https://stockx.com/news/the-2019-data-contest/), te dataset consist of 99,956 transactions from 2017 to 2019, two brands, and over 50 different styles. 
@@ -24,23 +18,22 @@ StockX provided data in 2019 as part of its [StockX Data Contest](https://stockx
 ![data_source](MarketAnalysis/media/data_source.png)
 
 ---
-## Exploratory Data Analysis
+## Market Analysis
 Using the dataset provide by StockX we evaluated the different aspects 
 [Sneakers Analysis](MarketAnalysis/notebooks/Sneakers_Data_Analysis.ipynb)
 
-### Analysis by Sneaker Name
 ![by_name](MarketAnalysis/media/by_name.png)
 
-### Analysis by Retail Price
+
 ![by_retail_price](MarketAnalysis/media/by_retail_price.png)
 
-### Analysis by Shoe Size
+
 ![by_shoe_size](MarketAnalysis/media/by_shoe_size.png)
 
-### Analysis by Region
+
 ![by_region](MarketAnalysis/media/by_region.png)
 
-### Analysis by Average Resale Price
+
 ![avg_sale_price](MarketAnalysis/media/avg_sale_price.png)
 
 ---
@@ -48,10 +41,29 @@ Using the dataset provide by StockX we evaluated the different aspects
 [Random Forest Regression](MarketAnalysis/notebooks/Random_Forest_Regression.ipynb)
 
 ### Parameters
-![rf_one](MarketAnalysis/media/rf_model_one.png)
-![rf_two](MarketAnalysis/media/rf_model_two.png)
+```python
+# Define features set
+X = df.drop(['sale_price'], axis=1)
+
+# Define target vector
+y = df.sale_price
+
+# Encoding variables
+X = pd.get_dummies(X, columns=["brand", "sneaker_name", "buyer_region"])
+X.head()
+
+# Splitting into Train and Test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = 27)
+
+# Create the random forest regresor instance
+rf_model = RandomForestRegressor(n_estimators=500,random_state=27)
+```
 
 ### Results
-![predict-actual](MarketAnalysis/media/predict-actual.png)
-![feature_importances](MarketAnalysis/media/feature_importances.png)
-![metrics](MarketAnalysis/media/metrics.png)
+```python
+R²: 0.98
+Mean Absolute Error: 14.49
+Median Absolute Error: 7.10
+Accuracy: 97.14%
+```
+![feature_importances](MarketAnalysis/media/feature_importance.png)
