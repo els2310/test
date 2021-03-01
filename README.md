@@ -3,24 +3,25 @@
 ## Table of Contents
 
 * [Summary](#summary)
+* [Market Analysis and Modeling](#market-analysis-and-modeling) 
+* [Development Platforms](#development-platforms)
+* [Blockchain Technology](#blockchain-technology) 
+* [Smart Contracts](#smart_contracts) 
+* [Digital Tokens - Non-Fungible Tokens(NFT)](#digital-tokens-non-fungible-tokens(NFT)) 
+* [Initial Coin Offering (ICO)](#initial-coin-offering-(ICO)) 
+* [Demo](#demo)
+* [Collaborators](#collaborators)
 * [Resources](#resources)
-* [Market Analysis](#market-analysis) 
-* [Modeling](#modeling)
+
+
+
 ---
 ## Summary
 
 ---
-## Resources
-![Stockx_image](images/stockxlogo.png)
 
-StockX provided data in 2019 as part of its [StockX Data Contest](https://stockx.com/news/the-2019-data-contest/), te dataset consist of 99,956 transactions from 2017 to 2019, two brands, and over 50 different styles. 
-
-![data_source](MarketAnalysis/media/data_source.png)
-
----
-## Market Analysis
-Using the dataset provide by StockX we evaluated the different aspects 
-[Sneakers Analysis](MarketAnalysis/notebooks/Sneakers_Data_Analysis.ipynb)
+## Market Analysis and Modeling
+Using the dataset provide by StockX we evaluated the different aspects of the sneakers resale market and develop a regression model to predict resale price identify the most relevant features of the sneakers market. 
 
 ![by_name](MarketAnalysis/media/by_name.png)
 
@@ -35,10 +36,6 @@ Using the dataset provide by StockX we evaluated the different aspects
 
 
 ![avg_sale_price](MarketAnalysis/media/avg_sale_price.png)
-
----
-## Modeling
-[Random Forest Regression](MarketAnalysis/notebooks/Random_Forest_Regression.ipynb)
 
 ### Parameters
 ```python
@@ -67,3 +64,38 @@ Median Absolute Error: 7.10
 Accuracy: 97.14%
 ```
 ![feature_importances](MarketAnalysis/media/feature_importance.png)
+
+---
+## Development Platforms
+![pinata](images/pinata.png)
+![metamask](images/metamask.png)
+![python](images/python.jpeg)
+![jupyterlab](images/jupyterlab.png)
+
+---
+## Blockchain Technology
+
+---
+## Smart Contracts
+
+---
+## Digital Tokens - Non-Fungible Tokens(NFT)
+
+---
+## Initial Coin Offering (ICO)
+
+---
+## Demo 
+
+---
+## Collaborators
+- Emmanuel Lopez els2310@gmail.com 
+- Etienne Alcaraz etiennegalcaraz@gmail.com
+- Jerry Hsieh cthsieh@ucdavis.edu
+- Sylvia 
+
+---
+## Resources
+- [StockX Data Contest](https://stockx.com/news/the-2019-data-contest/)
+- [Random Forest Regression](MarketAnalysis/notebooks/Random_Forest_Regression.ipynb)
+- [Sneakers Analysis](MarketAnalysis/notebooks/Sneakers_Data_Analysis.ipynb)
